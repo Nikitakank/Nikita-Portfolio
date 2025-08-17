@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikita Kank | Cloud Engineer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    .location {
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    nav {
+      margin-top: 2rem;
+    }
+
+    nav a {
+      color: #00bcd4;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      display: none;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      margin: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #00e6e6;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .profile-pic {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img src="/img.jpg" alt="Nikita Kank" class="profile-pic">
+    <h1>NIKITA KANK</h1>
+    <p class="tagline">Passionate Cloud & DevOps Engineer | AWS | Automation | Problem Solver</p>
+    <p class="location">Pune, India</p>
+
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('about')">About</a>
+      <a onclick="showSection('skills')">Skills</a>
+      <a onclick="showSection('projects')">Projects</a>
+      <a onclick="showSection('contact')">Contact</a>
+      <a href="https://www.linkedin.com/in/nikita-kank-3898a724b" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Nikitakank" target="_blank">GitHub</a>
+    </nav>
+  </div>
+
+  <section id="home" class="active">
+    <div class="hero">
+      <h2>Welcome to My Portfolio</h2>
+      <p>Explore my journey, projects, and skills as a passionate Cloud & DevOps Engineer dedicated to creating scalable and automated infrastructure.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>👩‍💻 About Me</h2>
+    <p>Fresher Cloud Engineer passionate about building scalable, secure, and automated infrastructure using AWS and DevOps tools.</p>
+    <p>🎓 B.Tech in Structural Engineering</p>
+    <p>💡 Currently mastering Cloud Architecture</p>
+  </section>
+
+  <section id="skills">
+    <h2>🔧 Skills</h2>
+    <p>AWS | Networking | Automation | Linux | Kubernetes | Docker | Git | GitHub | Terraform | Jenkins | Ansible</p>
+    <p>Proficient in designing, deploying, and managing modern cloud-native infrastructure and automation pipelines.</p>
+  </section>
+
+  <section id="projects">
+    <h2>🛠️ Projects</h2>
+    <p><strong>Scalable Online Examination Platform</strong></p>
+    <ul>
+      <li>Built using Node.js, DynamoDB, S3, and EC2</li>
+      <li>Secure cloud-native exam system with auto-scoring</li>
+      <li>Email notification and dynamic UI</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>📫 Contact</h2>
+    <p>📧 Email: <a href="mailto:nikitakank2@gmail.com">nikitakank2@gmail.com</a></p>
+    <p>📱 Phone: +91 9175687109</p>
+    <p>🔗 <a href="https://www.linkedin.com/in/nikita-kank-3898a724b" target="_blank">LinkedIn</a></p>
+    <p>🔗 <a href="https://github.com/your-github" target="_blank">GitHub</a></p>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+
+</html>
